@@ -1,0 +1,8 @@
+venv/
+.idea/
+*.exe
+*.txt
+*.pdf
+.vscode
+*~
+*.json

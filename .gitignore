@@ -1,9 +1,6 @@
 venv/
 .idea/
-*.exe
-*.txt
-*.pdf
 .vscode
 *~
 *.json
-test.py
+test.*

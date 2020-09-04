@@ -13,6 +13,9 @@ body{
 .name{
     font-size: 40px;
 }
+.contain{
+    width:100%;
+}
 .header-navbar{
     background-color: transparent;
     position: sticky;
@@ -72,13 +75,16 @@ body{
 }
 .img-style-under{
     position: absolute;
-    top:-150px;
-    right: -250px;
-    width:500px;
+    top:0px;
+    right: 0px;
+    width:300px;
     height: 800px;
-    border-radius: 50%;
     content: "";
-    background-image:repeating-linear-gradient(180deg, #ff0000, #ff3399);
+    background-image:url(../images/bg1.png);
+    background-origin: border-box;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
 }
 .circle{
     content: "";
@@ -243,11 +249,11 @@ body{
         height: auto;
     }
     .intro .intro-text{
-        border-radius: 50px 50px 0px 0px ;
+        
         background-image: linear-gradient(to bottom, white, #e6ffff);
         background-size:contain;
         border-top: 10px solid white;
-        width:90%;
+        width:100%;
         height:auto;
         float: none;
     }
@@ -301,9 +307,9 @@ body{
         height: 300px;
     }
     .img-style-under{
-        top:-50px;
-        right: -160px;
-        width:400px;
+        top:0px;
+        right: 0px;
+        width:225px;
         height: 600px;
     }
     .skills-mob{
@@ -314,7 +320,25 @@ body{
         width:30%;
     }
 }
-@media (max-width:200px){
+@media (min-width:1800px){
+    .contain{
+        width:1500px;
+        margin: auto
+    }
+    .img-style-under{
+        display: none;
+    }
+    .intro .pic .img-style-over{
+        position: static;
+        margin-top: 50px;
+    }
+    .intro{
+        border-radius: 10px;
+        padding: 20px 0px;
+        box-shadow: 1px 1px 20px 3px #d9d9d9;
+    }
+}
+@media (max-width:250px){
     body{
        display: none;
     }

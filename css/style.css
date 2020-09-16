@@ -7,7 +7,7 @@ body{
     overflow-x: hidden;
     background-color: #e6ffff;
     color:#404040;
-    font-family:monospace;
+    font-family:"Comic Sans MS", cursive, sans-serif;
     user-select: none;
 }
 .name{
@@ -125,7 +125,7 @@ body{
     box-shadow: 1px 1px 20px 3px #d9d9d9;
     background-color: white;
     border-radius: 40px;
-    padding:20px 5px;
+    padding-bottom: 20px;
     margin-top:20px;    
 }
 .flex-box{
@@ -135,6 +135,7 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     border-radius: 2px;
+    padding: 0px 50px;
 }
 .box{
     padding:0px 10px;
@@ -148,10 +149,11 @@ body{
     font-weight: 400;
     padding :15px 30px;
     background-color: #ff4d4d;
-    border: 1px solid #ff4d4d;
+    border: 1.5px solid #ff4d4d;
     border-radius: 40px;
     content: " ";
     margin: 8px;
+    transition: 0.5s;
 }
 .btn-style-2{
     text-align: center;
@@ -159,10 +161,20 @@ body{
     font-weight: 400;
     padding : 15px 40px;
     background-color: #00e6e6;
-    border: 1px solid #00e6e6;
+    border: 1.5px solid #00e6e6;
     border-radius: 30px;
     content: " ";
     margin: 8px;
+    transition: 0.3s;
+}
+.btn-style-1:hover{
+    color: #ff4d4d;
+    background-color: transparent;
+    cursor:pointer;
+}
+.btn-style-2:hover{
+    box-shadow: 2px 3px 5px 4px #d9d9d9;
+    cursor:pointer;
 }
 .footer-bottom{
     width:100%;

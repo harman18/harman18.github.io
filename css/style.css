@@ -7,7 +7,7 @@ body{
     overflow-x: hidden;
     background-color: #e6ffff;
     color:#404040;
-    font-family: "Roboto Slab", "Times New Roman", serif;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     user-select: none;
 }
 .name{
@@ -68,7 +68,8 @@ body{
     height: auto;
     float:right;
     color:#ff4d4d;
-    margin:auto
+    margin:auto;
+    font-family: "Roboto Slab", "Times New Roman", serif;
 }
 .intro-text-subhead{
     padding:60px 10px 0px 10px;margin:auto;max-width:500px;text-align: justify;
@@ -114,7 +115,7 @@ body{
 .temp-box{
 }
 .skills{
-    width:95%;;
+    width:97%;;
     margin: auto;
     box-shadow: 1px 1px 20px 3px #d9d9d9;
     background-color: white;
@@ -137,6 +138,12 @@ body{
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+}
+.projects{
+    padding:20px 80px;
+    width:50%;
+    height:auto;
+    margin:auto;
 }
 .btn-style-1{
     text-align: center;
@@ -198,12 +205,12 @@ body{
 }
 .txt{
     padding: 7px 15px;
-    font-size:11px;
+    font-size:12px;
     border-radius: 20px;
     display: inline;
     margin: 3px;
     font-weight: bold;
-    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-family:monospace;
 }
 .clr1{
     background-color: green;
@@ -235,7 +242,7 @@ body{
 }
 .hr{
     background-color: #cce6ff;
-    width:80%;
+    width:95%;
     height:3px;
     margin-left: auto;
     margin-right: auto;
@@ -297,11 +304,11 @@ body{
         display: none;
     }
     .skills-mob{
-        padding-top: 40px;
+        padding: 40px 0px!important;
        display: block!important; width:100%!important;
     }
     .line{
-        width:10%;
+        width:20%;
     }
     .profile{
         display: block;
@@ -316,6 +323,11 @@ body{
         width:90%!important;
         margin:auto!important;
     }
+    .projects{
+        width:100%;
+        padding: 20px 100px;
+        
+    }
     @media (max-width:600px){
         .profile{
             width: 200px;
@@ -324,6 +336,10 @@ body{
     }
         .temp-box{
             display: none;
+        }
+        .projects{
+            width:100%;
+            padding: 20px 10px;
         }
     }
 }
@@ -345,15 +361,21 @@ body{
     .skills-mob{
        display: block!important;
         width:50%!important;
+        padding: 40px 0px!important;
     }
     .line{
         width:30%;
+    }
+    .projects{
+        padding: 20px 40px;
     }
 }
 @media (min-width:1800px){
     .contain{
         width:1500px;
-        margin: auto
+        margin: auto;
+        min-height: 100%;
+            box-shadow: 1px 1px 20px 3px #d9d9d9;
     }
     .img-style-under{
         display: none;
@@ -365,7 +387,6 @@ body{
     .intro{
         border-radius: 10px;
         padding: 20px 0px;
-        box-shadow: 1px 1px 20px 3px #d9d9d9;
     }
 }
 @media (max-width:250px){

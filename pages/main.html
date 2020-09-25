@@ -10,16 +10,29 @@
     </head>
     <body>
         <div class="contain-all">
-            <div class="contain-all-overlay"></div>
-        <div class="header-navbar" style="justify-content: center;">
+        <div class="contain-all-overlay"></div>
+        <div style="justify-content: center; background-color: transparent; position: fixed;top:0px;width:inherit;min-height:100px;display:flex;flex-wrap: wrap;overflow:hidden;clear: left;z-index:9;">
         <div class="contain">
             <header class="header-navbar">
-                <div class="header-navbar-box" style="padding-right: 0px;padding-left: 100px;"><div class="box" style="cursor: pointer;"><img src="../images/logo.png" width="60"; alt="logo"/></div></div>
+                <div class="header-navbar-box" style="padding-right: 0px;padding-left: 100px;"><div class="box" style="cursor: pointer;transition: 0.3s;"><img src="../images/logo.png" width="60"; alt="logo"/></div></div>
                 <div class="header-navbar-box" style="padding-left:0px;text-align: right;">
-                    <span class="header-navbar-txt"><span class="header-navbar-txt-under" style="">ABOUT</span></span>
-                    <span class="header-navbar-txt" ><span class="header-navbar-txt-under"><i class="icofont-ui-note" style="margin-right: 5px;"></i> LIVE PROJECTS</span></span>
-                    <span class="header-navbar-txt"><span class="header-navbar-txt-under"><i class="icofont-blogger" style="margin-right:5px;"></i> BLOG POSTS</span></span>
-                    <span class="header-navbar-txt"><span class="btn-style-3"><i class="icofont-contacts" style="margin-right:5px;"></i> CONTACT</span></span>
+                    <span class="header-navbar-txt"><span class="header-navbar-txt-under" onclick="window.location.replace('#main')"><i class="icofont-home" style="margin-right: 5px;"></i> HOME</span></span>
+                    <span class="header-navbar-txt"><span class="header-navbar-txt-under" onclick="window.location.replace('#about_me')"><i class="icofont-ui-user" style="margin-right: 5px;"></i> ABOUT</span></span>
+                    <span class="header-navbar-txt" ><span class="header-navbar-txt-under"onclick="window.location.replace('#projects_done')"><i class="icofont-ui-note" style="margin-right: 5px;"></i> PROJECTS </span>
+                        <!--<ul class="dropdown">
+                            <li class="dropdown-content">
+                                Tic Tac Toe
+                            </li>
+                            <li class="dropdown-content">
+                                Snake Game
+                            </li>
+                            <li class="dropdown-content">
+                                Code Editor
+                            </li>
+                        </ul>-->
+                    </span>
+                    <span class="header-navbar-txt"><span class="header-navbar-txt-under" style="cursor:not-allowed;"><i class="icofont-blogger" style="margin-right:5px;"></i> BLOG POSTS</span></span>
+                    <span class="header-navbar-txt"><span class="btn-style-3"onclick="window.location.replace('#contact_details')"><i class="icofont-contacts" style="margin-right:5px;"></i> CONTACT</span></span>
                 </div>
                 <div class="header-icon" onclick="headerToggle(this)">
                     <div class="header-icon-bar1"></div>
@@ -30,7 +43,7 @@
         </div>
         </div>
         <div class="contain">
-        <div class="intro">
+        <div class="intro" id="main">
             <div class="bg-mob"></div>
             <div class="bg-mob-mask"></div>
             <div class="pic">
@@ -46,10 +59,10 @@
                     <h1 class="name" style="display:block;color: #404040;line-height: 40px;text-align: left;">I am Harmanjot Singh </h1>
                     <div style="color: #404040;display: block; border-left: 6px solid #00e6e6;padding:5px 15px;line-height: 25px;font-size: 14px;text-align: left;"><em style="font-size: 17px;">Full Stack Web Developer</em>, Machine Learning Enthusiast  and love Solving Coding Problems. <br/>Currently pursuing degree in Bachelor of Computer Science & Engineering at Guru Nanak Dev University, Amritsar.</div>
                     <div class="flex-box" style="width:100%;height: auto; padding:30px 10px;justify-content: space-between;">
-                        <div class="btn-style-1">
+                        <div class="btn-style-1" onclick="window.location.replace('#projects_done')">
                             <i class="icofont-notebook"></i> Projects
                         </div>
-                        <div class="btn-style-2">
+                        <div class="btn-style-2"onclick="window.location.replace('#about_me')">
                             <i class="icofont-learn"></i> Learn More
                         </div>
                     </div>
@@ -79,7 +92,7 @@
                      &nbsp;
                 </div>
             </div>
-            <div class="main-sub" style="width:100%; margin:auto;padding: 10px;margin-top:30px;">
+            <div class="main-sub" style="width:100%; margin:auto;padding: 10px;margin-top:30px;" id="about_me">
                 <div class="flex-box" style="width: 100%;">
                     <div class="box temp-box" style="width:40%;min-height:300px;background-image: url('../images/about-me.png');background-size: contain;background-repeat: no-repeat;background-position: center;">
                     </div>
@@ -187,7 +200,7 @@
                     </div>
                 </div>
             </div>
-            <div class="main-sub" style="padding-top:60px;">
+            <div class="main-sub" style="padding-top:60px;" id="projects_done">
                 <div class="flex-box" style="padding:0px;">
                     <div class="box" style="width:100%;">
                         <h1>Projects</h1>
@@ -215,7 +228,7 @@
                                     <div class="box" style="width: 100%;padding-top:25px;">
                                         <div class="line" style="width:60%;background-color: grey;margin-bottom: 20px;"></div>
                                         <div class="over" style="opacity:1!important;">
-                                            <img class="over" src="../images/github-icon.png" style="vertical-align: middle;margin: 0px 5px;" width="34"  onclick="window.open('https:/github.com/harman18/TicTacToe')" />
+                                            <img class="over" src="../images/github-icon.png" style="vertical-align: middle;margin: 0px 5px;cursor: not-allowed;" width="34"  />
                                         </div>
                                     </div>
                                 </div>
@@ -235,7 +248,7 @@
                                     <div class="box" style="width: 100%;padding-top:25px;">
                                         <div class="line" style="width:60%;background-color: grey;margin-bottom: 20px;"></div>
                                         <div class="over" style="opacity:1!important;">
-                                            <img class="over" src="../images/github-icon.png" style="vertical-align: middle;margin: 0px 5px;" width="34"  onclick="window.open('https:/github.com/harman18/SnakeGame')" />
+                                            <img class="over" src="../images/github-icon.png" style="vertical-align: middle;margin: 0px 5px;cursor: not-allowed;" width="34" />
                                         </div>
                                     </div>
                                 </div>
@@ -254,7 +267,7 @@
                                     <div class="box" style="width: 100%;padding-top:25px;">
                                         <div class="line" style="width:60%;background-color: grey;margin-bottom: 20px;"></div>
                                         <div class="over" style="opacity:1!important;">
-                                            <img class="over" src="../images/github-icon.png" style="vertical-align: middle;margin: 0px 5px;" width="34"  onclick="window.open('https:/github.com/harman18/TicTacToe')" />
+                                            <img class="over" src="../images/github-icon.png" style="vertical-align: middle;margin: 0px 5px;cursor: not-allowed;" width="34" />
                                         </div>
                                     </div>
                                 </div>
@@ -263,7 +276,7 @@
                     </div>
                 </div>
             </div>
-            <div class="main-sub" style="padding-top:50px;">
+            <div class="main-sub" style="padding-top:50px;" id="contact_details">
                 <div class="box">
                     <div class="box" style="width:100%;">
                         <h2>Contact</h2>
@@ -276,7 +289,7 @@
                         <div class="box" style="width:inherit;padding-top:10px;">
                             <div class="over" style="opacity:1!important;">
                             <img class="over" src="../images/github-icon.png" style="vertical-align: middle;margin: 0px 5px;" width="34"  onclick="window.open('https:/github.com/harman18')" /></div>
-                            <div class="over">
+                            <div class="over" onclick="window.open('mailto:harman062001@gmail.com')">
                             <i  class="icofont-send-mail" style="font-size: 60px;vertical-align: middle;color: black;;margin: 0px 5px;"></i></div>
                         </div>
                     </div>

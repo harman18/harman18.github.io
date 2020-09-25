@@ -17,8 +17,13 @@ em{
     border-radius:10px;
 }
 .contain-all{
+    position: absolute;
+    top: 0xp;
+    right: 0px;
     width: 100%;
     background-color: #e6ffff;
+    transition: 0.5s;
+    margin-right: 0px;
 }
 .name{
     font-size: 40px;
@@ -44,6 +49,7 @@ em{
     display:flex;
     justify-content: center;
     margin-top: auto;
+    width: auto;
     margin-bottom: auto;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     color:color: #404040;
@@ -51,7 +57,9 @@ em{
 }
 .header-navbar-txt{
     display: inline-block;
-    padding: 0px 40px;
+    width: auto;
+    text-align: center;
+    padding: 0px 30px;
     font-size:13px;
     vertical-align: middle;
     margin-top: auto;
@@ -61,17 +69,45 @@ em{
     cursor: pointer;
     padding: 10px;
     transition: 0.3s;
-    color:#b300b3;
-    border-bottom: 2px solid #00cc00;
-    border-top: 2px solid orange;
+    color:#404040;
+    border-bottom: 2px solid transparent;
     border-radius:20%;
 }
 .header-navbar-txt-under:hover{
     color: #660066;
-    border-bottom: 2px solid orange;
-    border-top: 2px solid #00cc00;
+    border-bottom: 2px solid purple;
+}
+.header-icon{
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    cursor: pointer;
+    margin-right: 30px;
+}
+.header-icon-bar1, .header-icon-bar2, .header-icon-bar3{
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.header-toggle .header-icon-bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.header-toggle .header-icon-bar2 {opacity: 0;}
+
+.header-toggle .header-icon-bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
 }
 .intro{
+    position: static;
+    top: 0px;
     width:100%;
     height:600px;
     overflow: hidden;
@@ -185,6 +221,17 @@ em{
     height:auto;
     margin:auto;
 }
+.projects-inner{
+    background-color: white;
+    border-radius: 10px;
+    width:100%;
+    box-shadow: 1px 1px 20px 3px #d9d9d9;
+    padding:35px;
+    transition: 0.3s;
+}
+.projects-inner:hover{
+    transform: scale(1.06, 1.06);
+}
 .projects-bg{
     position: relative;
     top: 0px;
@@ -195,6 +242,7 @@ em{
     background-position: center;
     content: "";
     margin-bottom: 40px;
+    border-radius: 10px;
     }
 .projects-bg::after{
     position: absolute;
@@ -237,12 +285,12 @@ em{
     text-align: center;
     color: black;
     font-weight: 400;
-    padding : 15px 40px;
+    padding : 15px 30px;
     background-color: #00e6e6;
     border: 1.5px solid #00e6e6;
     border-radius: 30px;
     content: "";
-    box-shadow: 2px 5px 10px 1px grey;
+    box-shadow: 2px 2px 5px 0.5px grey;
     text-shadow: 1px 0.1px 10px #a6a6a6;
     transition: 0.3s;
 }
@@ -258,8 +306,8 @@ em{
 }
 .btn-style-3:hover{
     cursor: pointer;
-    box-shadow: 2px 5px 15px 1px grey;
-    padding: 20px 40px;
+    box-shadow: 2px 2px 10px 1px grey;
+    padding: 18px 30px;
 }
 .footer-bottom{
     display: flex;
@@ -342,8 +390,39 @@ em{
 }
 
 @media (max-width:900px){
+    .header-navbar-box:not(:first-child){
+        width:0px;
+        height: 100%!important;
+        display: block!important;
+        position: fixed;
+        visibility: hidden;
+        top:0px!important;
+        right: 0px!important;
+        background-color: white;
+        transition: 0.5s width;
+        padding: 0px;
+        padding-top: 100px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        box-shadow: 1px -10px 5px 3px grey;
+    }
+    .header-navbar-txt{
+        display: block;
+        width:250px;
+        background-color: white;
+        padding:40px;
+        text-align: left;
+        border-bottom: 1px solid grey;
+    }
+    .header-icon{
+        display: block;
+    }
+    .header-navbar-box:first-child{
+        padding-left: 60px!important;
+    }
     .contain-all{
         background-color: transparent!important;
+        margin: 0px;
     }
     .bg-mob{
         z-index:-1;
@@ -352,11 +431,12 @@ em{
         height:100%;
         width:100%;
         background-image: url(../images/bg1.jpg);
-        background-size: cover;
+        background-size:cover;
+        background-repeat: no-repeat;
     }
     .bg-mob-mask{
         z-index:-1;
-        position:fixed;
+        position:absolute;
         top:0px;
         height:100%;
         width:100%;
@@ -382,12 +462,9 @@ em{
     .header-navbar{
         position: fixed;
         background-color: white;
-        opacity: 0.3;
+        opacity: 1;
         box-shadow: 1px 1px 10px 1px grey;
         transition: opacity 0.2s linear;
-    }
-    .header-navbar:hover{
-        opacity: 1;
     }
     .img-style-under{
         display: none;
@@ -427,6 +504,9 @@ em{
         h1{
             font-size: 30px!important;
         }
+        .header-navbar-box:first-child{
+            padding-left: 30px!important;
+        }
         .flex-box{
             padding:0px 10px;
         }
@@ -445,10 +525,16 @@ em{
             width:100%;
             padding: 20px 10px;
         }
+        .projects-bg{
+            background-size: contain!important;
+        }
     }
 }
 
 @media (max-width:1100px) and (min-width:900px){
+    .contain-all{
+        margin-right: 0px!important;
+    }
     .intro .pic .img-style-over{
         width:300px;
         height: 300px;
@@ -480,7 +566,22 @@ em{
         padding:0px 20px;
     }
 }
+
+@media (min-width:1100px) and (max-width:1800px){
+    .contain-all{
+        margin-right: 0px!important;
+    }
+    .header-navbar-box{
+        visibility: visible!important;
+        width: auto!important;
+        
+    }
+}
+
 @media (min-width:1800px){
+    .contain-all{
+        margin: 0px!important;
+    }
     .contain{
         width:1500px;
         margin: auto;
@@ -502,5 +603,4 @@ em{
     body{
        display: none;
     }
-    window.location
 }

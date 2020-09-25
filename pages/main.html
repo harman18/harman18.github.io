@@ -6,19 +6,25 @@
         <title>Portfolio</title>
         <link href="../css/style.css" rel="stylesheet" />
         <link href="../css/icofont/icofont.css" rel="stylesheet" />
-        <script src="../js/script.js"></script>
+        <script src="../js/script.js" defer="True"></script>
     </head>
     <body>
         <div class="contain-all">
+            <div class="contain-all-overlay"></div>
         <div class="header-navbar" style="justify-content: center;">
         <div class="contain">
             <header class="header-navbar">
-                <div class="header-navbar-box" style="padding-right: 0px;padding-left: 100px!important;"><div class="box" style="cursor: pointer;"><img src="../images/logo.png" width="60"; alt="logo"/></div></div>
+                <div class="header-navbar-box" style="padding-right: 0px;padding-left: 100px;"><div class="box" style="cursor: pointer;"><img src="../images/logo.png" width="60"; alt="logo"/></div></div>
                 <div class="header-navbar-box" style="padding-left:0px;text-align: right;">
-                    <span class="header-navbar-txt"><span class="header-navbar-txt-under">ABOUT</span></span>
-                    <span class="header-navbar-txt" ><span class="header-navbar-txt-under">LIVE PROJECTS</span></span>
-                    <span class="header-navbar-txt"><span class="header-navbar-txt-under">BLOG POSTS</span></span>
-                    <span class="header-navbar-txt"><span class="btn-style-3">CONTACT</span></span>
+                    <span class="header-navbar-txt"><span class="header-navbar-txt-under" style="">ABOUT</span></span>
+                    <span class="header-navbar-txt" ><span class="header-navbar-txt-under"><i class="icofont-ui-note" style="margin-right: 5px;"></i> LIVE PROJECTS</span></span>
+                    <span class="header-navbar-txt"><span class="header-navbar-txt-under"><i class="icofont-blogger" style="margin-right:5px;"></i> BLOG POSTS</span></span>
+                    <span class="header-navbar-txt"><span class="btn-style-3"><i class="icofont-contacts" style="margin-right:5px;"></i> CONTACT</span></span>
+                </div>
+                <div class="header-icon" onclick="headerToggle(this)">
+                    <div class="header-icon-bar1"></div>
+                    <div class="header-icon-bar2"></div>
+                    <div class="header-icon-bar3"></div>
                 </div>
             </header>
         </div>
@@ -50,7 +56,7 @@
                 </div>
             </div>
         </div>
-        <div class="main" style="padding-bottom: 40px;background-color:#e6ffff">
+        <div class="main" style="padding-bottom: 40px;background-color: #e6ffff">
             <div class="main-sub box-rate" style="width:70%;margin:auto;">
                 <div class="flex-box box-rate" style="width:80%;margin-left:0px;background-color:white;box-shadow: 1px 1px 20px 3px #d9d9d9;border-radius: 5px;padding:0px;">
                     <div class="box" style="width:33.33%;padding:40px 0px;font-size: 12px;">
@@ -92,13 +98,13 @@
             </div>
             <div class="main-sub" style="margin-top:10px;">
                 <div class="skills" style="font-weight: bold;">
-                    <div class="box" style="padding: 10px 0px 40px 0px;cursor:pointer;">
+                    <div class="box" style="padding: 10px 0px 0px 0px;cursor:pointer;">
                         <div class="box">
                             <h1 style="letter-spacing: 1px;font-size:35px;">Skills<span style="font-size: 15px;vertical-align: middle;display: inline-block;transform: rotate(90deg)">▶</span></h1>
                         </div>
                         <div class="line"></div>
                     </div>
-                    <div class="flex-box" style="padding: 40px 5px 10px 5px;">
+                    <div class="flex-box" style="padding: 80px 5px 10px 5px;">
                         <div class="box skills-mob" style="width:33.35%;font-size:40px;padding-bottom: 50px;">
                             <div class="box" style="width:inherit;color:green;font-weight:bolder;text-align: center;"><i class="icofont-code-alt"></i>
                             </div>
@@ -195,7 +201,7 @@
                     <div class="box" style="width:100%;">
                         <div class="flex-box" style="padding:0px;">
                             <div class="projects">
-                                <div style="background-color: white;border-radius: 10px;width:100%;box-shadow: 1px 1px 20px 3px #d9d9d9;padding:35px;">
+                                <div class="projects-inner">
                                     <div class="projects-bg" style="background-image: url('../images/tic-tac-toe.jpg')"></div>
                                     <div class="box" style="width:100%;text-align:left;opacity:0.8;">
                                         <img src="../images/github-icon.png" width="23" /><sup style="font-size:16px;padding-left:10px;"> GitHub Repo for </sup>
@@ -203,35 +209,53 @@
                                     <div class="box" style="width: 100%;text-align: left;padding-top: 10px;">
                                         <h2>Tic Tack Toe</h2>
                                     </div>
-                                    <div class="box" style="width: 100%;text-align: left;font-size: 14px;line-height: 130%;letter-spacing: 0.5px; word-spacing: 1px; color: grey;">
+                                    <div class="box" style="width: 100%;text-align: justify;font-size: 14px;line-height: 130%;letter-spacing: 0.5px; word-spacing: 1px; color: grey;">
                                         <p>It is a  Browser Game implemented with help of Html, Css, and  JavaScript. It can be played between two people. User can change grid system accoring to his choice.</p>
+                                    </div>
+                                    <div class="box" style="width: 100%;padding-top:25px;">
+                                        <div class="line" style="width:60%;background-color: grey;margin-bottom: 20px;"></div>
+                                        <div class="over" style="opacity:1!important;">
+                                            <img class="over" src="../images/github-icon.png" style="vertical-align: middle;margin: 0px 5px;" width="34"  onclick="window.open('https:/github.com/harman18/TicTacToe')" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="projects">
-                                <div style="background-color: white;border-radius: 10px;width:100%;box-shadow: 1px 1px 20px 3px #d9d9d9;padding:35px;">
-                                    <div class="projects-bg" style="background-image: url('../images/snake-game.jpg')"></div>
+                                <div class="projects-inner">
+                                    <div class="projects-bg" style="background-image: url('../images/snake-game.jpg');background-size: cover;"></div>
                                     <div class="box" style="width:100%;text-align:left;opacity:0.8;">
                                         <img src="../images/github-icon.png" width="23" /><sup style="font-size:16px;padding-left:10px;"> GitHub Repo for </sup>
                                     </div>
                                     <div class="box" style="width: 100%;text-align: left;padding-top: 10px;">
                                         <h2>Basic Snake Game</h2>
                                     </div>
-                                    <div class="box" style="width: 100%;text-align: left;font-size: 14px;line-height: 130%;letter-spacing: 0.5px; word-spacing: 1px; color: grey;">
+                                    <div class="box" style="width: 100%;text-align: justify;font-size: 14px;line-height: 130%;letter-spacing: 0.5px; word-spacing: 1px; color: grey;">
                                         <p>It is a  Browser Game implemented with help of Html, Css, and  JavaScript. </p>
+                                    </div>
+                                    <div class="box" style="width: 100%;padding-top:25px;">
+                                        <div class="line" style="width:60%;background-color: grey;margin-bottom: 20px;"></div>
+                                        <div class="over" style="opacity:1!important;">
+                                            <img class="over" src="../images/github-icon.png" style="vertical-align: middle;margin: 0px 5px;" width="34"  onclick="window.open('https:/github.com/harman18/SnakeGame')" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="projects">
-                                <div style="background-color: white;border-radius: 10px;width:100%;box-shadow: 1px 1px 20px 3px #d9d9d9;padding:35px;">
+                                <div class="projects-inner">
                                     <div class="box" style="width:100%;text-align:left;opacity:0.8;">
                                         <img src="../images/github-icon.png" width="23" /><sup style="font-size:16px;padding-left:10px;"> GitHub Repo for </sup>
                                     </div>
                                     <div class="box" style="width: 100%;text-align: left;padding-top: 10px;">
                                         <h2>Code Editor</h2>
                                     </div>
-                                    <div class="box" style="width: 100%;text-align: left;font-size: 14px;line-height: 130%;letter-spacing: 0.5px; word-spacing: 1px; color: grey;">
+                                    <div class="box" style="width: 100%;text-align: justify;font-size: 14px;line-height: 130%;letter-spacing: 0.5px; word-spacing: 1px; color: grey;">
                                         <p>It is an specialised code editor available for both Desktop and Android/IOS with features as auto-completion, grammatical check, syntax highlight and much more. It is implemented in React Native and aims at making a better environment for practicing code on Mobile Platform.</p>
+                                    </div>
+                                    <div class="box" style="width: 100%;padding-top:25px;">
+                                        <div class="line" style="width:60%;background-color: grey;margin-bottom: 20px;"></div>
+                                        <div class="over" style="opacity:1!important;">
+                                            <img class="over" src="../images/github-icon.png" style="vertical-align: middle;margin: 0px 5px;" width="34"  onclick="window.open('https:/github.com/harman18/TicTacToe')" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>  

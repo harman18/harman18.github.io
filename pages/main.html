@@ -16,9 +16,9 @@
             <header class="header-navbar">
                 <div class="header-navbar-box" style="padding-right: 0px;padding-left: 100px;"><div class="box" style="cursor: pointer;transition: 0.3s;"><img src="../images/logo.png" width="60"; alt="logo"/></div></div>
                 <div class="header-navbar-box" style="padding-left:0px;text-align: right;">
-                    <span class="header-navbar-txt"><span class="header-navbar-txt-under" onclick="window.location.replace('#main')"><i class="icofont-home" style="margin-right: 5px;"></i> HOME</span></span>
-                    <span class="header-navbar-txt"><span class="header-navbar-txt-under" onclick="window.location.replace('#about_me')"><i class="icofont-ui-user" style="margin-right: 5px;"></i> ABOUT</span></span>
-                    <span class="header-navbar-txt" ><span class="header-navbar-txt-under"onclick="window.location.replace('#projects_done')"><i class="icofont-ui-note" style="margin-right: 5px;"></i> PROJECTS </span>
+                    <span class="header-navbar-txt"><span class="header-navbar-txt-under" onclick="headerToggle();window.location.replace('#main');"><i class="icofont-home" style="margin-right: 5px;"></i> HOME</span></span>
+                    <span class="header-navbar-txt"><span class="header-navbar-txt-under" onclick="headerToggle();window.location.replace('#about_me')"><i class="icofont-ui-user" style="margin-right: 5px;"></i> ABOUT</span></span>
+                    <span class="header-navbar-txt" ><span class="header-navbar-txt-under"onclick="headerToggle();window.location.replace('#projects_done')"><i class="icofont-ui-note" style="margin-right: 5px;"></i> PROJECTS </span>
                         <!--<ul class="dropdown">
                             <li class="dropdown-content">
                                 Tic Tac Toe
@@ -32,9 +32,9 @@
                         </ul>-->
                     </span>
                     <span class="header-navbar-txt"><span class="header-navbar-txt-under" style="cursor:not-allowed;"><i class="icofont-blogger" style="margin-right:5px;"></i> BLOG POSTS</span></span>
-                    <span class="header-navbar-txt"><span class="btn-style-3"onclick="window.location.replace('#contact_details')"><i class="icofont-contacts" style="margin-right:5px;"></i> CONTACT</span></span>
+                    <span class="header-navbar-txt"><span class="btn-style-3"onclick="headerToggle();window.location.replace('#contact_details')"><i class="icofont-contacts" style="margin-right:5px;"></i> CONTACT</span></span>
                 </div>
-                <div class="header-icon" onclick="headerToggle(this)">
+                <div class="header-icon" onclick="headerToggle()">
                     <div class="header-icon-bar1"></div>
                     <div class="header-icon-bar2"></div>
                     <div class="header-icon-bar3"></div>

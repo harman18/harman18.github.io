@@ -95,10 +95,10 @@ em{
     box-shadow: 1px 1px 5px 1px grey;
 }
 .header-icon-bar1, .header-icon-bar2, .header-icon-bar3{
-    width: 35px;
+    width: 30px;
     height: 5px;
     background-color: #333;
-    margin: 6px 0;
+    margin: 5px 0;
     transition: 0.4s;
 }
 .header-toggle .header-icon-bar1 {

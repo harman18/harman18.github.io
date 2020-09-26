@@ -5,12 +5,14 @@ var headerNavbar = headerNavBoxLogo.parentElement;
 var headerIcon = document.getElementsByClassName("header-icon")[0];
 var containAllOverlay = document.getElementsByClassName("contain-all-overlay")[0];
 var currScroll = window.pageYOffset, prevScroll;
-function headerToggle(ele) {
-    ele.setAttribute("onclick", null);
-    setTimeout((function(){ele.setAttribute("onclick", "headerToggle(this)")}), 500);
-    setInterval(function(){ele.clic = false;}, 500)
-    ele.classList.toggle("header-toggle");
-    if (ele.classList.length == 1) {
+function headerToggle() {
+    if ((window.innerWidth) > 900){
+        return;
+    }
+    headerIcon.setAttribute("onclick", null);
+    setTimeout((function(){headerIcon.setAttribute("onclick", "headerToggle(this)")}), 500);
+    headerIcon.classList.toggle("header-toggle");
+    if (headerIcon.classList.length == 1) {
         containAll.style.marginRight = "0px";
         headerNavBox.style.width = "0px";
         setTimeout(function(){headerNavBox.style.visibility = "hidden";}, 500);

@@ -5,6 +5,7 @@ var headerNavbar = headerNavBoxLogo.parentElement;
 var headerIcon = document.getElementsByClassName("header-icon")[0];
 var containAllOverlay = document.getElementsByClassName("contain-all-overlay")[0];
 var currScroll = window.pageYOffset, prevScroll;
+var timeOut = 0;
 function headerToggle() {
     if ((window.innerWidth) > 900){
         return;
@@ -50,17 +51,18 @@ window.onscroll = function(){
     prevScroll = currScroll;
     currScroll = window.pageYOffset;
     if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30){
-        if (prevScroll < currScroll){
-            headerNavbar.style.top = "-80px";
-        }
-        else{
+        if (headerNavbar.style.top == "-80px" && prevScroll <= 30){
             headerNavbar.style.top = "0px";
+            timeOut = setTimeout(function(){headerNavbar.style.top="-80px"}, 1000);
         }
         headerNavbar.style.minHeight="80px";
         headerNavbar.style.backgroundColor="white";
         headerNavbar.style.boxShadow="1px 1px 5px 2px grey";
     }
     else{
+        clearTimeout(timeOut);
+        timeOut=0;
+        headerNavbar.style.top = "0px";
         headerNavbar.style.minHeight="60px";
         headerNavbar.style.backgroundColor="transparent";
         headerNavbar.style.boxShadow="none";
@@ -69,12 +71,14 @@ window.onscroll = function(){
 
 window.onmousemove = function(){
     if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30){
-        if(window.event.clientY <= 120){
+        if(window.event.clientY <= 80){
+            clearTimeout(timeOut);
+            timeOut = 0;
             headerNavbar.style.top = "0px";
         }
         else{
-            if (prevScroll < currScroll){
-                headerNavbar.style.top = "-80px";
+            if (headerNavbar.style.top == "0px" && !timeOut){
+                timeOut = setTimeout(function(){headerNavbar.style.top = "-80px";}, 1000);
             }
         }
     }

@@ -1,5 +1,6 @@
 *{
     box-sizing:border-box;
+    transition: 0.2s;
 }
 html{
     scroll-behavior: smooth;
@@ -8,9 +9,10 @@ body{
     margin :0px;
     padding :0px;
     overflow-x: hidden;
-    color:#404040
+    color:#404040;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     user-select: none;
+    background-color: #e6ffff;
 }
 em{
     font-size: 15px;
@@ -612,7 +614,7 @@ em{
     }
 }
 
-@media (min-width:1100px) and (max-width:1800px){
+@media (min-width:1100px) and (max-width:1400px){
     .contain-all{
         margin-right: 0px!important;
     }
@@ -622,21 +624,26 @@ em{
     }
 }
 
-@media (min-width:1800px){
+@media (min-width:1400px){
     .contain-all{
         margin: 0px!important;
     }
     .contain{
-        width:1800px;
+        width:1400px;
         margin: auto;
         min-height: 100%!important;
+    }
+    .skills{
+        padding: 0px 55px;
     }
     .img-style-under{
         display: none;
     }
     .intro .pic .img-style-over{
         position: static;
-        margin-top: 50px;
+        margin-top: 80px;
+        border: 7px solid white;
+        box-shadow: 80px 40px 0px 0px#1a8cff;
     }
     .intro{
         border-radius: 10px;

@@ -160,8 +160,9 @@ em{
 .profile{
     z-index: 1;
     background-color: #00e6e6;
-    background-image: url(../images/pic.jpg);
+    background-image: url(../images/pic.png);
     background-size: contain;
+    background-position: center;
     position: relative;
     top:120px;
     width:300px;
@@ -209,8 +210,9 @@ em{
 .intro .pic .img-style-over{
     z-index: 1;
     background-color: #00e6e6;
-    background-image: url(../images/pic.jpg);
+    background-image: url(../images/pic.png);
     background-size: contain;
+    background-position: center;
     position: absolute;
     top:100px;
     right: 80px;
@@ -624,17 +626,17 @@ em{
     }
 }
 
-@media (min-width:1400px){
+@media (min-width:1500px){
     .contain-all{
         margin: 0px!important;
     }
     .contain{
-        width:1400px;
+        width:1450px;
         margin: auto;
         min-height: 100%!important;
     }
     .skills{
-        padding: 0px 55px;
+        padding: 25px 55px;
     }
     .img-style-under{
         display: none;

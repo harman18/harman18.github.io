@@ -21,7 +21,7 @@ em{
     border-radius:10px;
 }
 .contain-all{
-    position: absolute;
+    position: relative;
     top: 0xp;
     right: 0px;
     width: 100%;
@@ -35,6 +35,9 @@ em{
 .contain{
     width:100%;
     min-height:100%;
+}
+.window{
+    width: 100%;
 }
 .header-navbar{
     background-color: transparent;
@@ -57,7 +60,7 @@ em{
     width: auto;
     margin-bottom: auto;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    color:color: #404040;
+    color: #404040;
     padding: 0px 45px;
 }
 .header-navbar-txt{
@@ -360,7 +363,7 @@ em{
     align-items: center;
     width:inherit;
     background-image: linear-gradient(180deg, #1a1a1a, #333333);
-    padding:20px 30px;
+    padding:5px 30px;
     color:#e6e6e6;
 }
 .line{

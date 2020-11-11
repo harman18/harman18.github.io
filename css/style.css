@@ -21,7 +21,7 @@ em{
     border-radius:10px;
 }
 .contain-all{
-    position: relative;
+    position: absolute;
     top: 0xp;
     right: 0px;
     width: 100%;
